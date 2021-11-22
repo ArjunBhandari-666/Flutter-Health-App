@@ -23,7 +23,7 @@ class _MyAppState extends State<MyApp> {
               margin: EdgeInsets.all(25),
               child: FlatButton(
                 child: Text(
-                  'SignUp',
+                  'My Button',
                   style: TextStyle(fontSize: 20.0),
                 ),
                 onPressed: () {},
