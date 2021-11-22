@@ -9,7 +9,7 @@ class Arjun extends StatefulWidget {
   _MyAppState createState() => _MyAppState();
 }
 
-class _MyAppState extends State<MyApp> {
+class _MyAppState extends State<Arjun> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
