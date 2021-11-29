@@ -7,7 +7,7 @@ class FancyButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return RawMaterialButton(onPressed: onPressed,
       fillColor: Color.white,
-      
+      child: Text("This Button"),
     );
   }
 }
