@@ -106,11 +106,18 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+      floatingActionButton: SizedBox(
+        width: 100, height:50,
+        child:  FloatingActionButton(
+        onPressed: () {
+          _incrementCounter();
+        },
+
         child: Icon(Icons.add),
         shape: BeveledRectangleBorder(borderRadius: BorderRadius.zero),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+          splashColor: Colors.indigoAccent,
+      ),
+      ),// This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
