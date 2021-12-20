@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(const MaterialApp(
-    title: 'My Screens',
+    title: "Image Changer",
     home: FirstPage(),
   ));
 }
@@ -13,21 +13,20 @@ class FirstPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('First Page'),
-      ),
-      body: Center(
-        child: ElevatedButton(
-          child: const Text('Open Second'),
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const SecondPage()),
-            );
-          },
-        ),
-      ),
-    );
+        appBar: AppBar(
+          title: const Text("First Screen"),),
+        body: Image.network('https://picsum.photos/250?image=9'),
+
+          child: ElevatedButton(
+            child: const Text("Next page"),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const SecondPage()),
+              );
+            },
+          ),
+        ));
   }
 }
 
@@ -37,17 +36,18 @@ class SecondPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Second Page"),
-      ),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: const Text('Go back!'),
-        ),
-      ),
-    );
+        appBar: AppBar(
+          title: const Text("Second Screen",
+        ),),
+        body: Image.network(
+            'https://upload.wikimedia.org/wikipedia/commons/1/1a/Crystal_Project_computer.png'),
+
+          child: ElevatedButton(
+            child: const Text("Next page"),
+            onPressed: () {
+              Navigator.pop(context);
+            },
+          ),
+        ));
   }
 }
