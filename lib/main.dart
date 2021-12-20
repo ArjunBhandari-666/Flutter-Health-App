@@ -16,10 +16,16 @@ class FirstPage extends StatelessWidget {
         appBar: AppBar(
           title: const Text("First Screen"),
         ),
-        body: Center(children: [
-          Image.network('https://picsum.photos/250?image=9'),
-          ElevatedButton(
-            child: const Text("Next page"),
+        body : Column (
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Container(
+              child : Image.network('https://picsum.photos/250?image=9'),
+
+            ),
+            Container(
+              child : ElevatedButton(
+                child: const Text("Next page"),
             onPressed: () {
               Navigator.push(
                 context,
@@ -27,7 +33,15 @@ class FirstPage extends StatelessWidget {
               );
             },
           ),
-        ]));
+
+            )
+            
+            
+
+          ],
+        ) 
+          
+      ));
   }
 }
 
@@ -40,17 +54,34 @@ class SecondPage extends StatelessWidget {
         appBar: AppBar(
           title: const Text("Second Screen"),
         ),
-        body: Center(children: [
-          Image.network(
-              'https://upload.wikimedia.org/wikipedia/commons/1/1a/Crystal_Project_computer.png'),
-          ElevatedButton(
-            child: const Text("Prev page"),
-            onPressed: () {
-              Navigator.pop(
-                context,
-              );
-            },
-          ),
-        ]));
+        body : Column (
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Container(
+              child : Image.network('https://upload.wikimedia.org/wikipedia/commons/1/1a/Crystal_Project_computer.png'),
+
+            ),
+            Container(
+              child : ElevatedButton(
+                child: const Text("Next page"),
+                onPressed: () {
+                  Navigator.pop(
+                    context
+                  );
+                },
+              ),
+
+            )
+
+
+
+          ],
+        )
+
+    ));
   }
+}
+
+
+class
 }
