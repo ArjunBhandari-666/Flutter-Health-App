@@ -9,13 +9,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: HomePage(),
+      title: 'Trying dual screens',
+      home: FirstPage(),
     );
   }
 }
 
-class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+class FirstPage extends StatelessWidget {
+  const FirstPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -26,6 +27,38 @@ class HomePage extends StatelessWidget {
         backgroundColor: Colors.amber,
         elevation: 30.0,
       ),
+      body: Center(
+          child: ElevatedButton(
+              child: const Text("Press to Navigate") ,
+              onPressed: (){
+                Navigator.push(context, const SecondPage())
+              },
+            ),
+        ),
+    );
+  }
+}
+
+class SecondPage extends StatelessWidget {
+  const SecondPage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.blueAccent,
+      appBar: AppBar(
+        title: Text("This is the Second Screen"),
+        backgroundColor: Colors.amber,
+        elevation: 30.0,
+      ),
+      body: Center(
+          child: ElevatedButton(
+              child: const Text("Go back") ,
+              onPressed: (){
+                Navigator.pop(context);
+              },
+            ),
+        ),
     );
   }
 }
