@@ -16,32 +16,25 @@ class FirstPage extends StatelessWidget {
         appBar: AppBar(
           title: const Text("First Screen"),
         ),
-        body : Column (
+        body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Container(
-              child : Image.network('https://picsum.photos/250?image=9'),
-
+              child: Image.network('https://picsum.photos/250?image=9'),
             ),
             Container(
-              child : ElevatedButton(
+              child: ElevatedButton(
                 child: const Text("Next page"),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const SecondPage()),
-              );
-            },
-          ),
-
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const SecondPage()),
+                  );
+                },
+              ),
             )
-            
-            
-
           ],
-        ) 
-          
-      ));
+        ));
   }
 }
 
@@ -54,34 +47,22 @@ class SecondPage extends StatelessWidget {
         appBar: AppBar(
           title: const Text("Second Screen"),
         ),
-        body : Column (
+        body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Container(
-              child : Image.network('https://upload.wikimedia.org/wikipedia/commons/1/1a/Crystal_Project_computer.png'),
-
+              child: Image.network(
+                  'https://upload.wikimedia.org/wikipedia/commons/1/1a/Crystal_Project_computer.png'),
             ),
             Container(
-              child : ElevatedButton(
+              child: ElevatedButton(
                 child: const Text("Next page"),
                 onPressed: () {
-                  Navigator.pop(
-                    context
-                  );
+                  Navigator.pop(context);
                 },
               ),
-
             )
-
-
-
           ],
-        )
-
-    ));
+        ));
   }
-}
-
-
-class
 }
