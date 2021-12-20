@@ -14,9 +14,10 @@ class FirstPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text("First Screen"),),
-        body: Image.network('https://picsum.photos/250?image=9'),
-
+          title: const Text("First Screen"),
+        ),
+        body: Center(
+          child: Image.network('https://picsum.photos/250?image=9'),
           child: ElevatedButton(
             child: const Text("Next page"),
             onPressed: () {
@@ -37,15 +38,17 @@ class SecondPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text("Second Screen",
-        ),),
-        body: Image.network(
-            'https://upload.wikimedia.org/wikipedia/commons/1/1a/Crystal_Project_computer.png'),
-
+          title: const Text("Second Screen"),
+        ),
+        body: Center(
+          child: Image.network(
+              'https://upload.wikimedia.org/wikipedia/commons/1/1a/Crystal_Project_computer.png'),
           child: ElevatedButton(
             child: const Text("Next page"),
             onPressed: () {
-              Navigator.pop(context);
+              Navigator.pop(
+                context,
+              );
             },
           ),
         ));
