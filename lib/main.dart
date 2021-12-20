@@ -1,19 +1,10 @@
 import 'package:flutter/material.dart';
 
-void main(){
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget{
-  const MyApp ({Key?key}) : super (key: key);
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Trying dual screens',
-      home: FirstPage(),
-    );
-
-  }
+void main() {
+  runApp(const MaterialApp(
+    title: 'My Screens',
+    home: FirstPage(),
+  ));
 }
 
 class FirstPage extends StatelessWidget {
@@ -22,19 +13,20 @@ class FirstPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.indigoAccent,
       appBar: AppBar(
-        backgroundColor: Colors.blueAccent,
-        title: Text("This is the Title"),
+        title: const Text('First Page'),
       ),
       body: Center(
-          child: ElevatedButton(
-              child: const Text("Press to Navigate") ,
-              onPressed: (){
-                Navigator.push(context, const SecondPage())
-              },
-            ),
+        child: ElevatedButton(
+          child: const Text('Open Second'),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const SecondPage()),
+            );
+          },
         ),
+      ),
     );
   }
 }
@@ -45,20 +37,17 @@ class SecondPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueAccent,
       appBar: AppBar(
-        title: Text("This is the Second Screen"),
-        backgroundColor: Colors.amber,
-        elevation: 30.0,
+        title: const Text("Second Page"),
       ),
       body: Center(
-          child: ElevatedButton(
-              child: const Text("Go back") ,
-              onPressed: (){
-                Navigator.pop(context);
-              },
-            ),
+        child: ElevatedButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          child: const Text('Go back!'),
         ),
+      ),
     );
   }
 }
