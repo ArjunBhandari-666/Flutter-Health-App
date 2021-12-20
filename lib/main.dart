@@ -18,8 +18,12 @@ class FirstPage extends StatelessWidget {
         ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             Container(
+
+
+
               child: Image.network('https://picsum.photos/250?image=9'),
             ),
             Container(
@@ -49,6 +53,7 @@ class SecondPage extends StatelessWidget {
         ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             Container(
               child: Image.network(
@@ -56,7 +61,7 @@ class SecondPage extends StatelessWidget {
             ),
             Container(
               child: ElevatedButton(
-                child: const Text("Next page"),
+                child: const Text("GO BACK"),
                 onPressed: () {
                   Navigator.pop(context);
                 },
