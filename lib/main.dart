@@ -16,9 +16,9 @@ class FirstPage extends StatelessWidget {
         appBar: AppBar(
           title: const Text("First Screen"),
         ),
-        body: Center(
-          child: Image.network('https://picsum.photos/250?image=9'),
-          child: ElevatedButton(
+        body: Center(children: [
+          Image.network('https://picsum.photos/250?image=9'),
+          ElevatedButton(
             child: const Text("Next page"),
             onPressed: () {
               Navigator.push(
@@ -27,7 +27,7 @@ class FirstPage extends StatelessWidget {
               );
             },
           ),
-        ));
+        ]));
   }
 }
 
@@ -40,17 +40,17 @@ class SecondPage extends StatelessWidget {
         appBar: AppBar(
           title: const Text("Second Screen"),
         ),
-        body: Center(
-          child: Image.network(
+        body: Center(children: [
+          Image.network(
               'https://upload.wikimedia.org/wikipedia/commons/1/1a/Crystal_Project_computer.png'),
-          child: ElevatedButton(
-            child: const Text("Next page"),
+          ElevatedButton(
+            child: const Text("Prev page"),
             onPressed: () {
               Navigator.pop(
                 context,
               );
             },
           ),
-        ));
+        ]));
   }
 }
