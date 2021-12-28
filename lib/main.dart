@@ -3,71 +3,36 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(const MaterialApp(
     title: "Image Changer",
-    home: FirstPage(),
+    home: homePage(),
   ));
 }
 
-class FirstPage extends StatelessWidget {
-  const FirstPage({Key? key}) : super(key: key);
+class homePage extends StatelessWidget {
+  const homePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text("First Screen"),
+      appBar: AppBar(
+        title: Text("My App Bar"), // title of AppBar
+        centerTitle: true, // align the title to the center of the AppBar
+        titleSpacing: 0.0, // letter spacing for title
+        backgroundColor:
+            Colors.deepPurpleAccent, // background color of the AppBar
+        shadowColor: Colors.blue, // Shadow color for the AppBar
+        elevation: 10.0, // Elevation of the AppBar
+        toolbarHeight: 60.0, // Height of the toolbar
+        toolbarOpacity: 1.0, // Opacity of the toolbar
+        leading: IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.home)), // Leading icon with function
+        leadingWidth: 50.0, // Width of leading icon
+      ),
+      body: Center(
+        child: ElevatedButton(
+          child: Text,
         ),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            Container(
-
-
-
-              child: Image.network('https://picsum.photos/250?image=9'),
-            ),
-            Container(
-              child: ElevatedButton(
-                child: const Text("Next page"),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const SecondPage()),
-                  );
-                },
-              ),
-            )
-          ],
-        ));
-  }
-}
-
-class SecondPage extends StatelessWidget {
-  const SecondPage({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-          title: const Text("Second Screen"),
-        ),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            Container(
-              child: Image.network(
-                  'https://upload.wikimedia.org/wikipedia/commons/1/1a/Crystal_Project_computer.png'),
-            ),
-            Container(
-              child: ElevatedButton(
-                child: const Text("GO BACK"),
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-              ),
-            )
-          ],
-        ));
+      ),
+    );
   }
 }
