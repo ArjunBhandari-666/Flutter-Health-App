@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -51,7 +52,7 @@ class HomePage extends StatelessWidget {
             ),
             Container(
                 width: deviceWidth,
-                height: deviceHeight*0.30,
+                height: deviceHeight*0.46,
                 color: Colors.red,
 
                 // child: ElevatedButton(
@@ -101,6 +102,16 @@ class TreatmentHomepage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.blue.shade200,
+        title: const Text("Treatment Plan"),
+        centerTitle: true,
+        titleSpacing: 0.0, // letter spacing for title
+        shadowColor: Colors.blue.shade700, // Shadow color for the AppBar
+        elevation: 10.0, // Elevation of the AppBar
+        toolbarHeight: 60.0, // Height of the toolbar
+      ),
+    );
   }
 }
