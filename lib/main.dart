@@ -15,16 +15,20 @@ class HomePage extends StatelessWidget {
     double deviceWidth = MediaQuery.of(context).size.width;
     double deviceHeight = MediaQuery.of(context).size.height;
     return Scaffold(
-        appBar: AppBar(
-          title: const Text("Remote Health"), // title of AppBar
-          centerTitle: true, // align the title to the center of the AppBar
-          titleSpacing: 0.0, // letter spacing for title
-          backgroundColor:
-              Colors.blue.shade200, // background color of the AppBar
-          shadowColor: Colors.blue.shade700, // Shadow color for the AppBar
-          elevation: 10.0, // Elevation of the AppBar
-          toolbarHeight: 60.0, // Height of the toolbar
-          toolbarOpacity: 1.0, // Opacity of the toolbar
+        appBar: PreferredSize(
+            preferredSize: Size.fromHeight(deviceHeight*8/100),
+          child: AppBar(
+            title: const Text("Remote Health"), // title of AppBar
+            centerTitle: true, // align the title to the center of the AppBar
+            titleSpacing: 0.0, // letter spacing for title
+            backgroundColor:
+            Colors.blue.shade200, // background color of the AppBar
+            shadowColor: Colors.blue.shade700, // Shadow color for the AppBar
+            elevation: 10.0, // Elevation of the AppBar
+            toolbarHeight: 60.0, // Height of the toolbar
+            toolbarOpacity: 1.0,
+          ),
+           // Opacity of the toolbar
         ),
         body: Column(
           mainAxisSize: MainAxisSize.min,
@@ -33,30 +37,43 @@ class HomePage extends StatelessWidget {
           children: <Widget>[
             Container(
               width: deviceWidth,
-              height: deviceHeight / 2,
+              height: deviceHeight*0.46,
               color: Colors.blueGrey,
-              child: ElevatedButton(
-                  child: const Text("Results Homepage"),
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const ResultsHomepage()),
-                    );
-                  }),
+              // child: ElevatedButton(
+              //     child: const Text("Results Homepage"),
+              //     onPressed: () {
+              //       Navigator.push(
+              //         context,
+              //         MaterialPageRoute(
+              //             builder: (context) => const ResultsHomepage()),
+              //       );
+              //     }),
             ),
             Container(
-                child: ElevatedButton(
-                    child: const Text("Treatment Plan"),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const TreatmentHomepage()),
-                      );
-                    }))
-          ],
-        ));
+                width: deviceWidth,
+                height: deviceHeight*0.30,
+                color: Colors.red,
+
+                // child: ElevatedButton(
+                //
+                //
+                //
+                //     child: const Text("Treatment Plan"),
+                //     style: ,
+                //     onPressed: () {
+                //       Navigator.push(
+                //         context, MaterialPageRoute(
+                //           builder: (context) => const TreatmentHomepage()),
+                //       );
+                //     })
+            )
+          ], ));
+
+
+
+
+
+
   }
 }
 
