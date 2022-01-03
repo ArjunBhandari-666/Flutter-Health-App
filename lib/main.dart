@@ -35,7 +35,7 @@ class HomePage extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
+        children: <Widget>[
           Container(
             width: deviceWidth,
             height: deviceHeight * 0.46,
