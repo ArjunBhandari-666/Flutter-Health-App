@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(const MaterialApp(
-    title: "Remote Health",
+    title: "Image Changer",
     home: HomePage(),
   ));
 }
@@ -12,6 +12,8 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double deviceWidth = MediaQuery.of(context).size.width;
+    double deviceHeight = MediaQuery.of(context).size.height;
     return Scaffold(
         appBar: AppBar(
           title: const Text("Remote Health"), // title of AppBar
@@ -30,10 +32,8 @@ class HomePage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             Container(
-              width: deviceWidth/2,
-              height: deviceHeight/2,
-              margin: 0,
-              padding: 0,
+              width: deviceWidth,
+              height: deviceHeight / 2,
               color: Colors.blueGrey,
               child: ElevatedButton(
                   child: const Text("Results Homepage"),
