@@ -41,35 +41,37 @@ class HomePage extends StatelessWidget {
               width: deviceWidth,
               height: deviceHeight * 0.46,
               color: Colors.blueGrey,
-              // child: ElevatedButton(
-              //     child: const Text("Results Homepage"),
-              //     onPressed: () {
-              //       Navigator.push(
-              //         context,
-              //         MaterialPageRoute(
-              //             builder: (context) => const ResultsHomepage()),
-              //       );
-              //     }),
+              child: RaisedButton(
+                color: Colors.blueAccent,
+
+                  child: const Text("Results Homepage"),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const ResultsHomepage()),
+                    );
+                  }),
             ),
           ),
           Flexible(
               child: Container(
             width: deviceWidth,
             height: deviceHeight * 0.46,
-            color: Colors.red,
 
-            // child: ElevatedButton(
-            //
-            //
-            //
-            //     child: const Text("Treatment Plan"),
-            //     style: ,
-            //     onPressed: () {
-            //       Navigator.push(
-            //         context, MaterialPageRoute(
-            //           builder: (context) => const TreatmentHomepage()),
-            //       );
-            //     })
+            child: RaisedButton(
+              color: Colors.red,
+
+
+
+                child: const Text("Treatment Plan"),
+
+                onPressed: () {
+                  Navigator.push(
+                    context, MaterialPageRoute(
+                      builder: (context) => const TreatmentHomepage()),
+                  );
+                })
           ))
         ],
       )),
