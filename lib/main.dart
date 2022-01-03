@@ -30,7 +30,7 @@ class HomePage extends StatelessWidget {
         ),
         // Opacity of the toolbar
       ),
-      body: Expanded(
+      body: Flexible(
           child: Column(
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
