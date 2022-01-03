@@ -51,7 +51,26 @@ class HomePage extends StatelessWidget {
               //       );
               //     }),
             ),
-          )
+          ),
+          Flexible(
+              child: Container(
+            width: deviceWidth,
+            height: deviceHeight * 0.46,
+            color: Colors.red,
+
+            // child: ElevatedButton(
+            //
+            //
+            //
+            //     child: const Text("Treatment Plan"),
+            //     style: ,
+            //     onPressed: () {
+            //       Navigator.push(
+            //         context, MaterialPageRoute(
+            //           builder: (context) => const TreatmentHomepage()),
+            //       );
+            //     })
+          ))
         ],
       )),
     );
