@@ -27,16 +27,28 @@ class HomePage extends StatelessWidget {
         body: Column(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            ElevatedButton(
-                child: const Text("Results Homepage"),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const ResultsHomepage()),
-                  );
-                })
+          children: <Widget>[
+            Container(
+              child: ElevatedButton(
+                  child: const Text("Results Homepage"),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const ResultsHomepage()),
+                    );
+                  }),
+            ),
+            Container(
+                child: ElevatedButton(
+                    child: const Text("Treatment Plan"),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const TreatmentHomepage()),
+                      );
+                    }))
           ],
         ));
   }
@@ -52,6 +64,10 @@ class ResultsHomepage extends StatelessWidget {
         backgroundColor: Colors.blue.shade200,
         title: const Text("Results Review"),
         centerTitle: true,
+        titleSpacing: 0.0, // letter spacing for title
+        shadowColor: Colors.blue.shade700, // Shadow color for the AppBar
+        elevation: 10.0, // Elevation of the AppBar
+        toolbarHeight: 60.0, // Height of the toolbar
       ),
     );
   }
