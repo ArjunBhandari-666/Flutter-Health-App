@@ -36,37 +36,21 @@ class HomePage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
-          Container(
-            width: deviceWidth,
-            height: deviceHeight * 0.46,
-            color: Colors.blueGrey,
-            // child: ElevatedButton(
-            //     child: const Text("Results Homepage"),
-            //     onPressed: () {
-            //       Navigator.push(
-            //         context,
-            //         MaterialPageRoute(
-            //             builder: (context) => const ResultsHomepage()),
-            //       );
-            //     }),
-          ),
-          Container(
-            width: deviceWidth,
-            height: deviceHeight * 0.46,
-            color: Colors.red,
-
-            // child: ElevatedButton(
-            //
-            //
-            //
-            //     child: const Text("Treatment Plan"),
-            //     style: ,
-            //     onPressed: () {
-            //       Navigator.push(
-            //         context, MaterialPageRoute(
-            //           builder: (context) => const TreatmentHomepage()),
-            //       );
-            //     })
+          Flexible(
+            child: Container(
+              width: deviceWidth,
+              height: deviceHeight * 0.46,
+              color: Colors.blueGrey,
+              // child: ElevatedButton(
+              //     child: const Text("Results Homepage"),
+              //     onPressed: () {
+              //       Navigator.push(
+              //         context,
+              //         MaterialPageRoute(
+              //             builder: (context) => const ResultsHomepage()),
+              //       );
+              //     }),
+            ),
           )
         ],
       )),
