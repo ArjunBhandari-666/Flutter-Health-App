@@ -26,9 +26,13 @@ class HomePage extends StatelessWidget {
         ),
         body: Column(
           mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             Container(
+              width: 100,
+              height: 500,
+              color: Colors.blueGrey,
               child: ElevatedButton(
                   child: const Text("Results Homepage"),
                   onPressed: () {
