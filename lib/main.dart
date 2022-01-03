@@ -41,9 +41,8 @@ class HomePage extends StatelessWidget {
               width: deviceWidth,
               height: deviceHeight * 0.46,
               color: Colors.blueGrey,
-              child: RaisedButton(
-                color: Colors.blueAccent,
-
+              child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(primary: Colors.amber),
                   child: const Text("Results Homepage"),
                   onPressed: () {
                     Navigator.push(
@@ -58,20 +57,20 @@ class HomePage extends StatelessWidget {
               child: Container(
             width: deviceWidth,
             height: deviceHeight * 0.46,
-
-            child: RaisedButton(
-              color: Colors.red,
-
-
-
-                child: const Text("Treatment Plan"),
-
-                onPressed: () {
-                  Navigator.push(
-                    context, MaterialPageRoute(
-                      builder: (context) => const TreatmentHomepage()),
-                  );
-                })
+            child: SizedBox(
+                width: deviceWidth * 0.90,
+                height: deviceHeight * 0.20,
+                child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        primary: const Color(0xFFB09DFE)),
+                    child: const Text("Treatment Plan"),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const TreatmentHomepage()),
+                      );
+                    })),
           ))
         ],
       )),
