@@ -43,8 +43,11 @@ class HomePage extends StatelessWidget {
               color: Colors.blueGrey,
               child: Center(
                   child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(primary: Colors.amber),
-                      child: const Text("Results Homepage"),
+                      style: ElevatedButton.styleFrom(
+                          primary: Colors.amber,
+                      ),
+                      
+                      child: const Image(image: AssetImage("heartbeat.png"),width: 100, height: 100),
                       onPressed: () {
                         Navigator.push(
                           context,
@@ -58,15 +61,20 @@ class HomePage extends StatelessWidget {
               child: Container(
             width: deviceWidth,
             height: deviceHeight * 0.46,
+            color: Colors.white54,
             child: Center(
                 child: SizedBox(
                     width: deviceWidth * 0.90,
                     height: deviceHeight * 0.20,
                     child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
+                            side: const BorderSide(
+                                color: Color(0xFFB09DFE),
+                                width: 10,
+                                style: BorderStyle.solid),
                             primary: Colors.white,
-                            elevation: 20.0,
-                            shadowColor: const Color(0xFFB09DFE),
+                            elevation: 10.0,
+                            shadowColor: Colors.black,
                             onPrimary: Colors.black),
                         child: const Text("Treatment Plan"),
                         onPressed: () {

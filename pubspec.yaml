@@ -88,7 +88,11 @@ flutter:
     - family: HighTowerText
       fonts:
         - asset: fonts/HTOWERT.ttf
-  #
+
+  assets:
+    - assets/heartbeat.png
+
+
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
 
