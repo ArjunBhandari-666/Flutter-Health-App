@@ -44,10 +44,8 @@ class HomePage extends StatelessWidget {
               child: Center(
                   child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                          primary: Colors.amber,
+                        primary: Colors.amber,
                       ),
-                      
-                      child: const Image(image: AssetImage("heartbeat.png"),width: 100, height: 100),
                       onPressed: () {
                         Navigator.push(
                           context,
