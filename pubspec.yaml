@@ -85,9 +85,15 @@ flutter:
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   fonts:
+    - family: Quicksand
+      fonts:
+        - asset: fonts/Quicksand.ttf
+
     - family: HighTowerText
       fonts:
         - asset: fonts/HTOWERT.ttf
+
+
 
   assets:
     - assets/heartbeat.png

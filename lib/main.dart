@@ -37,38 +37,54 @@ class HomePage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           Flexible(
-            child: Container(
-              width: deviceWidth,
-              height: deviceHeight * 0.46,
-              color: Colors.blueGrey,
-              child: Center(
-                  child: FloatingActionButton(
-                      child: const Image(
-                          image: AssetImage("heartbeat.png"),
-                          width: 100,
-                          height: 100),
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const ResultsHomepage()),
-                        );
-                      })),
-            ),
-          ),
-          Flexible(
               child: Container(
             width: deviceWidth,
             height: deviceHeight * 0.46,
-            color: Colors.white54,
+            color: const Color(0xFFD4EEF1),
             child: Center(
                 child: SizedBox(
                     width: deviceWidth * 0.90,
                     height: deviceHeight * 0.20,
                     child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
+                            textStyle: const TextStyle(
+                                fontFamily: "Quicksand",
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20),
                             side: const BorderSide(
                                 color: Color(0xFFB09DFE),
+                                width: 10,
+                                style: BorderStyle.solid),
+                            primary: Colors.white,
+                            elevation: 10.0,
+                            shadowColor: Colors.black,
+                            onPrimary: Colors.black),
+                        child: const Text("Results Review"),
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const ResultsHomepage()),
+                          );
+                        }))),
+          )),
+          Flexible(
+              child: Container(
+            width: deviceWidth,
+            height: deviceHeight * 0.46,
+            color: const Color(0xFFD4EEF1),
+            child: Center(
+                child: SizedBox(
+                    width: deviceWidth * 0.90,
+                    height: deviceHeight * 0.20,
+                    child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                            textStyle: const TextStyle(
+                                fontFamily: "Quicksand",
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20),
+                            side: const BorderSide(
+                                color: Color(0xFF8F93F9),
                                 width: 10,
                                 style: BorderStyle.solid),
                             primary: Colors.white,
