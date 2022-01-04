@@ -42,7 +42,7 @@ class HomePage extends StatelessWidget {
               height: deviceHeight * 0.46,
               color: Colors.blueGrey,
               child: Center(
-                  child: ElevatedButton(
+                  child: FloatingActionButton(
                       child: const Image(
                           image: AssetImage("heartbeat.png"),
                           width: 100,
