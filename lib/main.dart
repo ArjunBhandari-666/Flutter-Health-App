@@ -31,7 +31,9 @@ class HomePage extends StatelessWidget {
         // Opacity of the toolbar
       ),
       body: Center(
+
           child: Column(
+
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -60,9 +62,16 @@ class HomePage extends StatelessWidget {
             child: SizedBox(
                 width: deviceWidth * 0.90,
                 height: deviceHeight * 0.20,
+
                 child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                        primary: const Color(0xFFB09DFE)),
+                        primary: Colors.white,
+                    elevation: 20.0,
+                    shadowColor: const Color(0xFFB09DFE),
+                        onPrimary: Colors.black
+                    ),
+
+
                     child: const Text("Treatment Plan"),
                     onPressed: () {
                       Navigator.push(
