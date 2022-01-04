@@ -58,23 +58,25 @@ class HomePage extends StatelessWidget {
               child: Container(
             width: deviceWidth,
             height: deviceHeight * 0.46,
-            child: SizedBox(
-                width: deviceWidth * 0.90,
-                height: deviceHeight * 0.20,
-                child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                        primary: Colors.white,
-                        elevation: 20.0,
-                        shadowColor: const Color(0xFFB09DFE),
-                        onPrimary: Colors.black),
-                    child: const Text("Treatment Plan"),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const TreatmentHomepage()),
-                      );
-                    })),
+            child: Center(
+                child: SizedBox(
+                    width: deviceWidth * 0.90,
+                    height: deviceHeight * 0.20,
+                    child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                            primary: Colors.white,
+                            elevation: 20.0,
+                            shadowColor: const Color(0xFFB09DFE),
+                            onPrimary: Colors.black),
+                        child: const Text("Treatment Plan"),
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    const TreatmentHomepage()),
+                          );
+                        }))),
           ))
         ],
       )),
