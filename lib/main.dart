@@ -41,16 +41,17 @@ class HomePage extends StatelessWidget {
               width: deviceWidth,
               height: deviceHeight * 0.46,
               color: Colors.blueGrey,
-              child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(primary: Colors.amber),
-                  child: const Text("Results Homepage"),
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const ResultsHomepage()),
-                    );
-                  }),
+              child: Center(
+                  child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(primary: Colors.amber),
+                      child: const Text("Results Homepage"),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const ResultsHomepage()),
+                        );
+                      })),
             ),
           ),
           Flexible(
