@@ -122,7 +122,8 @@ class ResultsHomepage extends StatelessWidget {
         elevation: 10.0, // Elevation of the AppBar
         toolbarHeight: 60.0, // Height of the toolbar
       ),
-    );
+      );
+
   }
 }
 
