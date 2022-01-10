@@ -40,6 +40,11 @@ class HomePage extends StatelessWidget {
               child: Container(
             width: deviceWidth,
             height: deviceHeight * 0.46,
+            decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: NetworkImage(
+                        "https://th.bing.com/th/id/OIP.z-CKWwGo0OIjuiLsMLmIxAHaHD?pid=ImgDet&rs=1"),
+                    fit: BoxFit.cover)),
             color: const Color(0xFFD4EEF1),
             child: Center(
                 child: SizedBox(
@@ -122,8 +127,7 @@ class ResultsHomepage extends StatelessWidget {
         elevation: 10.0, // Elevation of the AppBar
         toolbarHeight: 60.0, // Height of the toolbar
       ),
-      );
-
+    );
   }
 }
 
