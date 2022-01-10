@@ -37,15 +37,13 @@ class HomePage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           Flexible(
-              child: Container(
-            width: deviceWidth,
-            height: deviceHeight * 0.46,
-
-
-            child: Center(
-                child: SizedBox(
-                    width: deviceWidth * 0.90,
-                    height: deviceHeight * 0.20,
+            child: Container(
+                width: deviceWidth,
+                height: deviceHeight * 0.46,
+                child: Center(
+                    child: SizedBox(
+                        width: deviceWidth * 0.90,
+                        height: deviceHeight * 0.20,
                         child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
                                 textStyle: const TextStyle(
@@ -60,33 +58,28 @@ class HomePage extends StatelessWidget {
                                 elevation: 10.0,
                                 shadowColor: Colors.black,
                                 onPrimary: Colors.black),
-                              child: Row(
-                                children: 
-                                [
-                                  Container(
-                                    decoration: const BoxDecoration(
-                                    image: DecorationImage(image: NetworkImage(
-                                    "https://th.bing.com/th/id/OIP.z-CKWwGo0OIjuiLsMLmIxAHaHD?pid=ImgDet&rs=1"),
-                                      ),
+                            child: Row(
+                              children: [
+                                Container(
+                                  decoration: const BoxDecoration(
+                                    image: DecorationImage(
+                                      image: NetworkImage(
+                                          "https://th.bing.com/th/id/OIP.z-CKWwGo0OIjuiLsMLmIxAHaHD?pid=ImgDet&rs=1"),
+                                    ),
                                   ),
-                              ),
-                                  const Text("Results Review")
-                                ],
-                              ),
+                                ),
+                                const Text("Results Review")
+                              ],
+                            ),
                             onPressed: () {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => const ResultsHomepage()),
+                                    builder: (context) =>
+                                        const ResultsHomepage()),
                               );
-                            }
-                        )
-
-                    )
-
-      )
-    ),
-          )),
+                            })))),
+          ),
           Flexible(
               child: Container(
             width: deviceWidth,
