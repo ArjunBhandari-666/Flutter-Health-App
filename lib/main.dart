@@ -54,24 +54,25 @@ class HomePage extends StatelessWidget {
                                     color: Color(0xFFB09DFE),
                                     width: 10,
                                     style: BorderStyle.solid),
-                                primary: Colors.transparent,
+                                primary: Colors.white,
                                 elevation: 10.0,
                                 shadowColor: Colors.black,
                                 onPrimary: Colors.black),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
+                                const Text("Results Review"),
                                 Container(
                                   width: deviceWidth * 0.45,
-                                  height: deviceHeight * 0.20,
+                                  height: deviceHeight * 0.20 - 20.0,
                                   decoration: const BoxDecoration(
                                     image: DecorationImage(
-                                        image: Image.asset(
-                                            "assets/finalmedicine.png"),
+                                        image: AssetImage(
+                                            'assets/heartbeat.png'),
                                         fit: BoxFit.fill),
                                   ),
                                 ),
-                                const Text("Results Review")
+
                               ],
                             ),
                             onPressed: () {
@@ -93,6 +94,22 @@ class HomePage extends StatelessWidget {
                     width: deviceWidth * 0.90,
                     height: deviceHeight * 0.20,
                     child: ElevatedButton(
+                      child : Row(mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          const Text("Treatment Plan"),
+                          Container(
+                            width: deviceWidth * 0.45,
+                            height: (deviceHeight * 0.20) -25.0,
+                            decoration: const BoxDecoration(
+                              image: DecorationImage(
+                                  image: AssetImage(
+                                      'assets/fm.png'),
+                                  fit: BoxFit.scaleDown),
+                            ),
+                          ),
+
+                        ],
+                      ),
                         style: ElevatedButton.styleFrom(
                             textStyle: const TextStyle(
                                 fontFamily: "Quicksand",
@@ -106,7 +123,6 @@ class HomePage extends StatelessWidget {
                             elevation: 10.0,
                             shadowColor: Colors.black,
                             onPrimary: Colors.black),
-                        child: const Text("Treatment Plan"),
                         onPressed: () {
                           Navigator.push(
                             context,
