@@ -59,13 +59,13 @@ class HomePage extends StatelessWidget {
                                 shadowColor: Colors.black,
                                 onPrimary: Colors.black),
                             child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
                                 Container(
                                   decoration: const BoxDecoration(
                                     image: DecorationImage(
-                                      image: NetworkImage(
-                                          "https://th.bing.com/th/id/OIP.z-CKWwGo0OIjuiLsMLmIxAHaHD?pid=ImgDet&rs=1"),
-                                    ),
+                                        image: Image.asset("finalmedicine.png"),
+                                        fit: BoxFit.fill),
                                   ),
                                 ),
                                 const Text("Results Review")
