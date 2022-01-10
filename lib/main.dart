@@ -40,38 +40,58 @@ class HomePage extends StatelessWidget {
               child: Container(
             width: deviceWidth,
             height: deviceHeight * 0.46,
-            decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: NetworkImage(
-                        "https://th.bing.com/th/id/OIP.z-CKWwGo0OIjuiLsMLmIxAHaHD?pid=ImgDet&rs=1"),
-                    fit: BoxFit.cover)),
-            color: const Color(0xFFD4EEF1),
+
+
             child: Center(
                 child: SizedBox(
                     width: deviceWidth * 0.90,
                     height: deviceHeight * 0.20,
-                    child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                            textStyle: const TextStyle(
-                                fontFamily: "Quicksand",
-                                fontWeight: FontWeight.bold,
-                                fontSize: 20),
-                            side: const BorderSide(
-                                color: Color(0xFFB09DFE),
-                                width: 10,
-                                style: BorderStyle.solid),
-                            primary: Colors.white,
-                            elevation: 10.0,
-                            shadowColor: Colors.black,
-                            onPrimary: Colors.black),
-                        child: const Text("Results Review"),
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const ResultsHomepage()),
-                          );
-                        }))),
+                    child: Row(
+                      children: [],
+                    )
+
+                        child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                                textStyle: const TextStyle(
+                                    fontFamily: "Quicksand",
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20),
+                                side: const BorderSide(
+                                    color: Color(0xFFB09DFE),
+                                    width: 10,
+                                    style: BorderStyle.solid),
+                                primary: Colors.transparent,
+                                elevation: 10.0,
+                                shadowColor: Colors.black,
+                                onPrimary: Colors.black),
+                            child: Container(
+                              child: Row(
+                                children: [
+                              Container(
+                              decoration: const BoxDecoration(
+                                  image: DecorationImage(image: NetworkImage(
+                                  "https://th.bing.com/th/id/OIP.z-CKWwGo0OIjuiLsMLmIxAHaHD?pid=ImgDet&rs=1"),
+
+                            ),
+          ),
+                              ),
+                                  const Text("Results Review")
+                                ],
+                              ),
+                            ),
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const ResultsHomepage()),
+                              );
+                            }
+                        )
+
+                    )
+
+      )
+    ),
           )),
           Flexible(
               child: Container(
