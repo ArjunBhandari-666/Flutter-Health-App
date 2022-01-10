@@ -46,10 +46,6 @@ class HomePage extends StatelessWidget {
                 child: SizedBox(
                     width: deviceWidth * 0.90,
                     height: deviceHeight * 0.20,
-                    child: Row(
-                      children: [],
-                    )
-
                         child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
                                 textStyle: const TextStyle(
@@ -64,21 +60,19 @@ class HomePage extends StatelessWidget {
                                 elevation: 10.0,
                                 shadowColor: Colors.black,
                                 onPrimary: Colors.black),
-                            child: Container(
                               child: Row(
-                                children: [
-                              Container(
-                              decoration: const BoxDecoration(
-                                  image: DecorationImage(image: NetworkImage(
-                                  "https://th.bing.com/th/id/OIP.z-CKWwGo0OIjuiLsMLmIxAHaHD?pid=ImgDet&rs=1"),
-
-                            ),
-          ),
+                                children: 
+                                [
+                                  Container(
+                                    decoration: const BoxDecoration(
+                                    image: DecorationImage(image: NetworkImage(
+                                    "https://th.bing.com/th/id/OIP.z-CKWwGo0OIjuiLsMLmIxAHaHD?pid=ImgDet&rs=1"),
+                                      ),
+                                  ),
                               ),
                                   const Text("Results Review")
                                 ],
                               ),
-                            ),
                             onPressed: () {
                               Navigator.push(
                                 context,
