@@ -59,13 +59,17 @@ class HomePage extends StatelessWidget {
                                 shadowColor: Colors.black,
                                 onPrimary: Colors.black),
                             child: Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
                               children: [
                                 Container(
+                                  width: deviceWidth*0.45,
+                                  height: deviceHeight*0.20,
                                   decoration: const BoxDecoration(
                                     image: DecorationImage(
                                       image: NetworkImage(
-                                          "https://th.bing.com/th/id/OIP.z-CKWwGo0OIjuiLsMLmIxAHaHD?pid=ImgDet&rs=1"),
-                                    ),
+                                          "https://th.bing.com/th/id/OIP.z-CKWwGo0OIjuiLsMLmIxAHaHD?pid=ImgDet&rs=1"
+                                      ),
+                                    fit: BoxFit.cover),
                                   ),
                                 ),
                                 const Text("Results Review")
