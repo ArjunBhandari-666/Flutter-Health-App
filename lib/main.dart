@@ -66,9 +66,9 @@ class HomePage extends StatelessWidget {
                                   height: deviceHeight * 0.20,
                                   decoration: const BoxDecoration(
                                     image: DecorationImage(
-                                        image: NetworkImage(
-                                            "https://th.bing.com/th/id/OIP.z-CKWwGo0OIjuiLsMLmIxAHaHD?pid=ImgDet&rs=1"),
-                                        fit: BoxFit.cover),
+                                        image: Image.asset(
+                                            "assets/finalmedicine.png"),
+                                        fit: BoxFit.fill),
                                   ),
                                 ),
                                 const Text("Results Review")
