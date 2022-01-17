@@ -7,9 +7,6 @@ void main() {
   ));
 }
 
-
-
-
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -70,12 +67,11 @@ class HomePage extends StatelessWidget {
                                   height: deviceHeight * 0.20 - 20.0,
                                   decoration: const BoxDecoration(
                                     image: DecorationImage(
-                                        image: AssetImage(
-                                            'assets/heartbeat.png'),
+                                        image:
+                                            AssetImage('assets/heartbeat.png'),
                                         fit: BoxFit.fill),
                                   ),
                                 ),
-
                               ],
                             ),
                             onPressed: () {
@@ -97,22 +93,21 @@ class HomePage extends StatelessWidget {
                     width: deviceWidth * 0.90,
                     height: deviceHeight * 0.20,
                     child: ElevatedButton(
-                      child : Row(mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          const Text("Treatment Plan"),
-                          Container(
-                            width: deviceWidth * 0.45,
-                            height: (deviceHeight * 0.20) -25.0,
-                            decoration: const BoxDecoration(
-                              image: DecorationImage(
-                                  image: AssetImage(
-                                      'assets/fm.png'),
-                                  fit: BoxFit.scaleDown),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            const Text("Treatment Plan"),
+                            Container(
+                              width: deviceWidth * 0.45,
+                              height: (deviceHeight * 0.20) - 25.0,
+                              decoration: const BoxDecoration(
+                                image: DecorationImage(
+                                    image: AssetImage('assets/fm.png'),
+                                    fit: BoxFit.scaleDown),
+                              ),
                             ),
-                          ),
-
-                        ],
-                      ),
+                          ],
+                        ),
                         style: ElevatedButton.styleFrom(
                             textStyle: const TextStyle(
                                 fontFamily: "Quicksand",
@@ -159,13 +154,6 @@ class ResultsHomepage extends StatelessWidget {
     );
   }
 }
-
-
-
-
-
-
-
 
 class TreatmentHomepage extends StatelessWidget {
   const TreatmentHomepage({Key? key}) : super(key: key);
