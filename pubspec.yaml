@@ -97,7 +97,7 @@ flutter:
 
   assets:
     - assets/heartbeat.png
-    - assets/fm.png
+    - assets/med.png
 
 
   # For details regarding fonts from package dependencies,

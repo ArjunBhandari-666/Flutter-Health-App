@@ -7,9 +7,6 @@ void main() {
   ));
 }
 
-
-
-
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -43,6 +40,7 @@ class HomePage extends StatelessWidget {
             child: Container(
                 width: deviceWidth,
                 height: deviceHeight * 0.46,
+                color: const Color(0xFFD4EEF1),
                 child: Center(
                     child: SizedBox(
                         width: deviceWidth * 0.90,
@@ -70,12 +68,11 @@ class HomePage extends StatelessWidget {
                                   height: deviceHeight * 0.20 - 20.0,
                                   decoration: const BoxDecoration(
                                     image: DecorationImage(
-                                        image: AssetImage(
-                                            'assets/heartbeat.png'),
+                                        image:
+                                            AssetImage('assets/heartbeat.png'),
                                         fit: BoxFit.fill),
                                   ),
                                 ),
-
                               ],
                             ),
                             onPressed: () {
@@ -97,22 +94,21 @@ class HomePage extends StatelessWidget {
                     width: deviceWidth * 0.90,
                     height: deviceHeight * 0.20,
                     child: ElevatedButton(
-                      child : Row(mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          const Text("Treatment Plan"),
-                          Container(
-                            width: deviceWidth * 0.45,
-                            height: (deviceHeight * 0.20) -25.0,
-                            decoration: const BoxDecoration(
-                              image: DecorationImage(
-                                  image: AssetImage(
-                                      'assets/fm.png'),
-                                  fit: BoxFit.scaleDown),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            const Text("Treatment Plan"),
+                            Container(
+                              width: deviceWidth * 0.45,
+                              height: (deviceHeight * 0.20) - 25.0,
+                              decoration: const BoxDecoration(
+                                image: DecorationImage(
+                                    image: AssetImage('assets/med.png'),
+                                    fit: BoxFit.scaleDown),
+                              ),
                             ),
-                          ),
-
-                        ],
-                      ),
+                          ],
+                        ),
                         style: ElevatedButton.styleFrom(
                             textStyle: const TextStyle(
                                 fontFamily: "Quicksand",
@@ -146,26 +142,230 @@ class ResultsHomepage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double deviceWidth = MediaQuery.of(context).size.width;
+    double deviceHeight = MediaQuery.of(context).size.height;
+    return Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.blue.shade200,
+          title: const Text("Results Review"),
+          centerTitle: true,
+          titleSpacing: 0.0, // letter spacing for title
+          shadowColor: Colors.blue.shade700, // Shadow color for the AppBar
+          elevation: 10.0, // Elevation of the AppBar
+          toolbarHeight: deviceHeight * 0.08, // Height of the toolbar
+        ),
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        body: Center(
+            child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Flexible(
+                child: Container(
+                    width: deviceWidth,
+                    height: deviceHeight * 0.23,
+                    color: const Color(0xFFD4EEF1),
+                    child: Center(
+                      child: SizedBox(
+                        width: deviceWidth * 0.90,
+                        height: deviceHeight * 0.13,
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                              primary: const Color(0xFFF4CACA),
+                              onPrimary: Colors.black,
+                              textStyle: const TextStyle(
+                                  fontFamily: "Quicksand",
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 20),
+                              side: const BorderSide(
+                                  width: 4.0, color: Color(0xFFFB8989))),
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const VitalSigns()),
+                            );
+                          },
+                          child: const Text("Vital Signs"),
+                        ),
+                      ),
+                    ))),
+            Flexible(
+                child: Container(
+                    width: deviceWidth,
+                    height: deviceHeight * 0.23,
+                    color: const Color(0xFFD4EEF1),
+                    child: Center(
+                      child: SizedBox(
+                        width: deviceWidth * 0.90,
+                        height: deviceHeight * 0.13,
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                              primary: const Color(0xFFF4CACA),
+                              onPrimary: Colors.black,
+                              textStyle: const TextStyle(
+                                  fontFamily: "Quicksand",
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 20),
+                              side: const BorderSide(
+                                  width: 4.0, color: Color(0xFFFB8989))),
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const LabResults()),
+                            );
+                          },
+                          child: const Text("Lab Results"),
+                        ),
+                      ),
+                    ))),
+            Flexible(
+                child: Container(
+                    width: deviceWidth,
+                    height: deviceHeight * 0.23,
+                    color: const Color(0xFFD4EEF1),
+                    child: Center(
+                      child: SizedBox(
+                        width: deviceWidth * 0.90,
+                        height: deviceHeight * 0.13,
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                              primary: const Color(0xFFF4CACA),
+                              onPrimary: Colors.black,
+                              textStyle: const TextStyle(
+                                  fontFamily: "Quicksand",
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 20),
+                              side: const BorderSide(
+                                  width: 4.0, color: Color(0xFFFB8989))),
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const RadioResults()),
+                            );
+                          },
+                          child: const Text("Radiology Results"),
+                        ),
+                      ),
+                    ))),
+            Flexible(
+                child: Container(
+                    width: deviceWidth,
+                    height: deviceHeight * 0.23,
+                    color: const Color(0xFFD4EEF1),
+                    child: Center(
+                      child: SizedBox(
+                        width: deviceWidth * 0.90,
+                        height: deviceHeight * 0.13,
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                              primary: const Color(0xFFF4CACA),
+                              onPrimary: Colors.black,
+                              textStyle: const TextStyle(
+                                  fontFamily: "Quicksand",
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 20),
+                              side: const BorderSide(
+                                  width: 4.0, color: Color(0xFFFB8989))),
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const OtherResults()),
+                            );
+                          },
+                          child: const Text("Other Measurements"),
+                        ),
+                      ),
+                    ))),
+          ],
+        )));
+  }
+}
+
+class VitalSigns extends StatelessWidget {
+  const VitalSigns({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue.shade200,
-        title: const Text("Results Review"),
+        title: const Text("Vital Signs"),
         centerTitle: true,
         titleSpacing: 0.0, // letter spacing for title
         shadowColor: Colors.blue.shade700, // Shadow color for the AppBar
         elevation: 10.0, // Elevation of the AppBar
-        toolbarHeight: 60.0, // Height of the toolbar
+        toolbarHeight: 60.0,
       ),
+      backgroundColor: const Color(0xFFD4EEF1),
     );
   }
 }
 
+class LabResults extends StatelessWidget {
+  const LabResults({Key? key}) : super(key: key);
 
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.blue.shade200,
+        title: const Text("Lab Results"),
+        centerTitle: true,
+        titleSpacing: 0.0, // letter spacing for title
+        shadowColor: Colors.blue.shade700, // Shadow color for the AppBar
+        elevation: 10.0, // Elevation of the AppBar
+        toolbarHeight: 60.0,
+      ),
+      backgroundColor: const Color(0xFFD4EEF1),
+    );
+  }
+}
 
+class RadioResults extends StatelessWidget {
+  const RadioResults({Key? key}) : super(key: key);
 
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.blue.shade200,
+        title: const Text("Radiology Results"),
+        centerTitle: true,
+        titleSpacing: 0.0, // letter spacing for title
+        shadowColor: Colors.blue.shade700, // Shadow color for the AppBar
+        elevation: 10.0, // Elevation of the AppBar
+        toolbarHeight: 60.0,
+      ),
+      backgroundColor: const Color(0xFFD4EEF1),
+    );
+  }
+}
 
+class OtherResults extends StatelessWidget {
+  const OtherResults({Key? key}) : super(key: key);
 
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.blue.shade200,
+        title: const Text("Other Measurements"),
+        centerTitle: true,
+        titleSpacing: 0.0, // letter spacing for title
+        shadowColor: Colors.blue.shade700, // Shadow color for the AppBar
+        elevation: 10.0, // Elevation of the AppBar
+        toolbarHeight: 60.0,
+      ),
+      backgroundColor: const Color(0xFFD4EEF1),
+    );
+  }
+}
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 class TreatmentHomepage extends StatelessWidget {
   const TreatmentHomepage({Key? key}) : super(key: key);
@@ -185,3 +385,4 @@ class TreatmentHomepage extends StatelessWidget {
     );
   }
 }
+
