@@ -104,7 +104,7 @@ class HomePage extends StatelessWidget {
                               height: (deviceHeight * 0.20) - 25.0,
                               decoration: const BoxDecoration(
                                 image: DecorationImage(
-                                    image: AssetImage('assets/fm.png'),
+                                    image: AssetImage('assets/med.png'),
                                     fit: BoxFit.scaleDown),
                               ),
                             ),
