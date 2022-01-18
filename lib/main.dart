@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'dart:io';
-import 'package:webview_flutter/webview_flutter.dart';
 
 void main() {
   runApp(const MaterialApp(
