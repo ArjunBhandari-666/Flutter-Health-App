@@ -490,10 +490,7 @@ class MedPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    InAppWeb
-    return Container(
-      child: InAppWeb,
-    );
+    return Container();
   }
 }
 
@@ -514,27 +511,3 @@ class FollowUpPage extends StatelessWidget {
     return Container();
   }
 }
-
-
-
-
- class WebViewExample extends StatefulWidget {
-   @override
-   WebViewExampleState createState() => WebViewExampleState();
- }
-
- class WebViewExampleState extends State<WebViewExample> {
-   @override
-   void initState() {
-     super.initState();
-     // Enable virtual display.
-     if (Platform.isAndroid) WebView.platform = AndroidWebView();
-   }
-
-   @override
-   Widget build(BuildContext context) {
-     return WebView(
-       initialUrl: 'https://google form.dev',
-     );
-   }
- }
