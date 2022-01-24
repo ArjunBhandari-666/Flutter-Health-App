@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'web_view_container.dart';
 
 class Home extends StatelessWidget {
-  final _links = ['https://www.google.com/'];
+  final _links = ['https://camellabs.com'];
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class Home extends StatelessWidget {
                 child: Column(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: _links.map((link) => _urlButton(context, link)).toList(),
+      children: WebViewContainer(_links),
     ))));
   }
 
