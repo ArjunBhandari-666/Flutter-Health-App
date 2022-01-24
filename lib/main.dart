@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:health_project/Home2.dart';
 import 'home.dart';
 
 void main() => runApp(MyApp());
@@ -13,12 +12,14 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
           fontFamily: "Arial",
           textTheme: TextTheme(
-            button: TextStyle(color: Colors.white, fontSize: 18.0),
-          )),
+              button: TextStyle(color: Colors.white, fontSize: 18.0)
+              )),
       home: Home(),
     );
   }
 }
+
+
 //
 // import 'package:flutter/material.dart';
 // // import 'dart:io';

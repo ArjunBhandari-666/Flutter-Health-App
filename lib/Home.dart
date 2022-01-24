@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'web_view_container.dart';
 
 class Home extends StatelessWidget {
-  final _links = ['https://camellabs.com'];
+  final _links = ['https://www.google.com'];
 
   @override
   Widget build(BuildContext context) {
@@ -10,10 +10,10 @@ class Home extends StatelessWidget {
         body: SafeArea(
             child: SingleChildScrollView(
                 child: Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: WebViewContainer(_links),
-    ))));
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: _links.map((link) => _urlButton(context, link)).toList(),
+                ))));
   }
 
   Widget _urlButton(BuildContext context, String url) {
@@ -32,3 +32,4 @@ class Home extends StatelessWidget {
         MaterialPageRoute(builder: (context) => WebViewContainer(url)));
   }
 }
+

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'web_view_container.dart';
 
-class Home extends StatelessWidget {
+class Home2 extends StatelessWidget {
   final _links = ['https://www.google.com/'];
 
   @override
@@ -14,4 +14,4 @@ class Home extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: _links.map((link) => WebViewContainer(link)).toList(),
                 ))));
-  }
+  }}
