@@ -288,9 +288,9 @@ class ResultsHomepage extends StatelessWidget {
 
 class VitalSigns extends StatelessWidget {
   const VitalSigns({Key? key}) : super(key: key);
-  InAppWebViewController controller;
-  String url="";
-  double progress =0;
+  // InAppWebViewController controller;
+  // String url="";
+  // double progress =0;
 
   @override
   Widget build(BuildContext context) {
@@ -304,27 +304,27 @@ class VitalSigns extends StatelessWidget {
         elevation: 10.0, // Elevation of the AppBar
         toolbarHeight: 60.0,
       ),
-      body: SafeArea(child : Container( child:
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Container(
-              padding: const EdgeInsets.all(10.0)
-                  child: progress <1.0> LinearProgressIndicator(value: progress) : Container(
+      // body: SafeArea(child : Container( child:
+      //   Column(
+      //     crossAxisAlignment: CrossAxisAlignment.center,
+      //     mainAxisAlignment: MainAxisAlignment.center,
+      //     children: [
+      //       Container(
+      //         padding: const EdgeInsets.all(10.0)
+      //             child: progress <1.0> LinearProgressIndicator(value: progress) : Container(
 
-                ),
-            ),
-          Expanded(child: Container(
-          margin:const EdgeInsets.all(10.0)
-          decoration: BoxDecoration(border: Border.all(color: Colors.blueAccent)),
-          child: InAppWebView(
+      //           ),
+      //       ),
+      //     Expanded(child: Container(
+      //     margin:const EdgeInsets.all(10.0)
+      //     decoration: BoxDecoration(border: Border.all(color: Colors.blueAccent)),
+      //     child: InAppWebView(
 
-    ),
-          ))
-          ],
-        )
-      ))
+      // ),
+      //       ))
+      //       ],
+      // //     )
+      //   ))
     );
   }
 }
