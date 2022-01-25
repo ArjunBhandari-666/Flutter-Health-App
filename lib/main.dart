@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-// import 'dart:io';
-
 void main() {
   runApp(const MaterialApp(
     title: "Remote Health",
@@ -360,8 +358,6 @@ class RadioResults extends StatelessWidget {
         title: const Text("Radiology Results"),
         centerTitle: true,
         titleSpacing: 0.0, // letter spacing for title
-        shadowColor: Colors.blue.shade700, // Shadow color for the AppBar
-        elevation: 10.0, // Elevation of the AppBar
         toolbarHeight: 60.0,
       ),
       backgroundColor: const Color(0xFFD4EEF1),
@@ -533,3 +529,4 @@ class FollowUpPage extends StatelessWidget {
     return Container();
   }
 }
+
