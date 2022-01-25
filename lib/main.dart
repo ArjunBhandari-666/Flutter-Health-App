@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:webview_flutter/webview_flutter.dart';
+// import 'dart:io';
 void main() {
   runApp(const MaterialApp(
     title: "Remote Health",
@@ -302,27 +304,6 @@ class VitalSigns extends StatelessWidget {
         elevation: 10.0, // Elevation of the AppBar
         toolbarHeight: 60.0,
       ),
-      // body: SafeArea(child : Container( child:
-      //   Column(
-      //     crossAxisAlignment: CrossAxisAlignment.center,
-      //     mainAxisAlignment: MainAxisAlignment.center,
-      //     children: [
-      //       Container(
-      //         padding: const EdgeInsets.all(10.0)
-      //             child: progress <1.0> LinearProgressIndicator(value: progress) : Container(
-
-      //           ),
-      //       ),
-      //     Expanded(child: Container(
-      //     margin:const EdgeInsets.all(10.0)
-      //     decoration: BoxDecoration(border: Border.all(color: Colors.blueAccent)),
-      //     child: InAppWebView(
-
-      // ),
-      //       ))
-      //       ],
-      // //     )
-      //   ))
     );
   }
 }
@@ -385,7 +366,7 @@ class OtherResults extends StatelessWidget {
   }
 }
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 class TreatmentHomepage extends StatelessWidget {
   const TreatmentHomepage({Key? key}) : super(key: key);
@@ -517,7 +498,15 @@ class DietPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+        width: double.infinity,
+        height: 600,
+        child: WebView(
+          initialUrl: 'https://www.youtube.com',
+          // enable Javascript on WebView
+          javascriptMode: JavascriptMode.unrestricted,
+        )
+    );
   }
 }
 
@@ -526,7 +515,15 @@ class FollowUpPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+        width: double.infinity,
+        height: 600,
+        child: WebView(
+          initialUrl: 'https://www.google.com',
+          // enable Javascript on WebView
+          javascriptMode: JavascriptMode.unrestricted,
+        )
+    );
   }
 }
 
