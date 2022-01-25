@@ -304,6 +304,15 @@ class VitalSigns extends StatelessWidget {
         elevation: 10.0, // Elevation of the AppBar
         toolbarHeight: 60.0,
       ),
+        body: Container(
+            width: double.infinity,
+            height: 600,
+            child: WebView(
+              initialUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSeMYd8ivrHGTQTghrCaOf7kVC3dxBzZYzRTrGFfcpF3XGCp_w/viewform?usp=sf_link',
+              // enable Javascript on WebView
+              javascriptMode: JavascriptMode.unrestricted,
+            )
+        )
     );
   }
 }
@@ -323,7 +332,15 @@ class LabResults extends StatelessWidget {
         elevation: 10.0, // Elevation of the AppBar
         toolbarHeight: 60.0,
       ),
-      backgroundColor: const Color(0xFFD4EEF1),
+        body: Container(
+            width: double.infinity,
+            height: 600,
+            child: WebView(
+              initialUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSdTLYKXFruOc5NZVoxty3vDIenq912OKJmHOqJ1CSJpUh9pfQ/viewform?usp=sf_link',
+              // enable Javascript on WebView
+              javascriptMode: JavascriptMode.unrestricted,
+            )
+        )
     );
   }
 }
@@ -341,7 +358,15 @@ class RadioResults extends StatelessWidget {
         titleSpacing: 0.0, // letter spacing for title
         toolbarHeight: 60.0,
       ),
-      backgroundColor: const Color(0xFFD4EEF1),
+        body: Container(
+            width: double.infinity,
+            height: 600,
+            child: WebView(
+              initialUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSf_437f0rvCJ_hXS3Etpqtlygvu59owcK0VcDy2pS3b389IzQ/viewform?usp=sf_link',
+              // enable Javascript on WebView
+              javascriptMode: JavascriptMode.unrestricted,
+            )
+        )
     );
   }
 }
@@ -361,8 +386,17 @@ class OtherResults extends StatelessWidget {
         elevation: 10.0, // Elevation of the AppBar
         toolbarHeight: 60.0,
       ),
-      backgroundColor: const Color(0xFFD4EEF1),
+        body: Container(
+            width: double.infinity,
+            height: 600,
+            child: WebView(
+              initialUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSczU21kB4C5KJt-HCOIZ1aaNPq2jkF7L3vm6PoBlEfk3mDijw/viewform?usp=sf_link',
+              // enable Javascript on WebView
+              javascriptMode: JavascriptMode.unrestricted,
+            )
+        )
     );
+
   }
 }
 
@@ -489,7 +523,15 @@ class MedPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+        width: double.infinity,
+        height: 600,
+        child: WebView(
+          initialUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSdgFB6eNRBOGQ7S0xb6Uc9WqCneuLOhZytTCEfSCzREH4T0nA/viewform?usp=sf_link',
+          // enable Javascript on WebView
+          javascriptMode: JavascriptMode.unrestricted,
+        )
+    );
   }
 }
 
@@ -502,7 +544,7 @@ class DietPage extends StatelessWidget {
         width: double.infinity,
         height: 600,
         child: WebView(
-          initialUrl: 'https://www.youtube.com',
+          initialUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSfr9DKj_JaVQtzLI_1cFcLcpnm7JZtRQt2165dEu3NM_1CftA/viewform?usp=sf_link',
           // enable Javascript on WebView
           javascriptMode: JavascriptMode.unrestricted,
         )
@@ -519,7 +561,7 @@ class FollowUpPage extends StatelessWidget {
         width: double.infinity,
         height: 600,
         child: WebView(
-          initialUrl: 'https://www.google.com',
+          initialUrl: 'https://docs.google.com/forms/d/e/1FAIpQLScbOp7NZPTlrbWqQ4qAX8Fkv11bL51EYusXSe9ZyrOcwcUqeg/viewform?usp=sf_link',
           // enable Javascript on WebView
           javascriptMode: JavascriptMode.unrestricted,
         )
