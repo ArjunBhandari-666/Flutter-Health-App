@@ -1,15 +1,15 @@
 function doGet() {
-var sheet = SpreadsheetApp. openById("" ) ;
+var sheet = SpreadsheetApp. openById("") ;
 var values = sheet.getActivesheet() .getDataRange() .getValues() ;
 var data = [];
 for(var i= 1; i < values.length ; i++ ){
 var row = values[i];
 var feedback = {};
-feedback| ‘profile_pic'] = row[8];
-feedback ‘name’] = row[1];
-feedback( source'] = row[2];
-feedback| ‘feedback'] = row[3];
-feedback*sourceurl'] = row[4];
+feedback[‘profile_pic'] = row[8];
+feedback [‘name’] = row[1];
+feedback['source'] = row[2];
+feedback[‘feedback'] = row[3];
+feedback['sourceurl'] = row[4];
 data.push(feedback) ;
 }
 return ContentService.createTextOutput(JSON.stringify(data)).setMimeType(ContextService.MimeType.JSON) ;|
