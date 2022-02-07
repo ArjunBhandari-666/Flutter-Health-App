@@ -1,0 +1,12 @@
+function doGet(request){
+var sheet = SpreadsheetApp.openById("1nX-X_4Y5zR9RzcqTeE20r0GfiGeLWg2A0_1Y8IghTu4d");
+var values = sheet.getActiveSheet().getDataRange().getValues();
+var data = [];
+for (var i1 =1; i<values.length; i++) {
+var feedback = {};
+feedback['name'] = values[i][0];
+feedback['imageUrl'] = values[i][1];
+feedback['about'] = values[i][2];
+data.push(feedback);
+}
+ContentService.createTextOutput(JSON.stringify(data)).setMimeType(ContentService.MimeType.JSON);
