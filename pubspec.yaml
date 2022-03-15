@@ -29,12 +29,14 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  http: ^0.12.2
 
 
   webview_flutter: ^3.0.1
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+  flutter_native_splash: ^1.3.2
 
 #webview_flutter: ^0.3.3
 
@@ -102,6 +104,8 @@ flutter:
     - assets/heartbeat.png
     - assets/med.png
 
+flutter_native_splash:
+  color: "#F5D0DA"
 
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
