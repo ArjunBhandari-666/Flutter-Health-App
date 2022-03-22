@@ -14,7 +14,7 @@ class Home extends StatefulWidget {
 
 
 class _HomeState extends State<Home> {
-  List<FeedbackModel> feedbacks = List<FeedbackModel>.filled(5, 1);
+  List<FeedbackModel> feedbacks = List<FeedbackModel>();
 
   getFeedbackFromSheet() async {
     var raw = await http.get(
