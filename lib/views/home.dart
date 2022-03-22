@@ -14,7 +14,7 @@ class Home extends StatefulWidget {
 
 
 class _HomeState extends State<Home> {
-  List<FeedbackModel> feedbacks = List<FeedbackModel>();
+  List<FeedbackModel> feedbacks = List<FeedbackModel>.filled(5, 1);
 
   getFeedbackFromSheet() async {
     var raw = await http.get(
@@ -90,7 +90,7 @@ class _HomeState extends State<Home> {
 
 
 class FeedbackTile extends StatelessWidget {
-  final String timestamp, typeapt, dateapt, resultapt, notes;
+  final String? timestamp, typeapt, dateapt, resultapt, notes;
   FeedbackTile(
       {this.timestamp, this.typeapt, this.dateapt, this.resultapt, this.notes});
 
@@ -102,13 +102,13 @@ class FeedbackTile extends StatelessWidget {
             ElevatedButton(
               onPressed: (){},
 
-              child: Text(timestamp,style: TextStyle(color: Colors.red),
+              child: Text("$timestamp",style: TextStyle(color: Colors.red),
 
               ),
             ),
             ElevatedButton(
               onPressed: (){},
-              child: Text(notes),
+              child: Text( "$notes"),
             )
           ],
 

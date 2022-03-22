@@ -1,9 +1,9 @@
 class FeedbackModel {
-  String timestamp;
-  String typeapt;
-  String dateapt;
-  String resultapt;
-  String notes;
+  String? timestamp;
+  String? typeapt;
+  String? dateapt;
+  String? resultapt;
+  String? notes;
 
   FeedbackModel(
       {this.timestamp, this.typeapt, this.dateapt, this.resultapt, this.notes });
