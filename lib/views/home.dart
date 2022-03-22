@@ -5,15 +5,15 @@ import 'package:health_project/feedback_model.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert' as convert;
 
-class RadioView extends StatefulWidget {
+class Home extends StatefulWidget {
   @override
-  _HomeState createState() => _RadioViewState();
+  _HomeState createState() => _HomeState();
 }
 
 
 
 
-class _RadioViewState extends State<RadioView> {
+class _HomeState extends State<Home> {
   List<FeedbackModel> feedbacks = List<FeedbackModel>.filled(5, 1);
 
   getFeedbackFromSheet() async {
